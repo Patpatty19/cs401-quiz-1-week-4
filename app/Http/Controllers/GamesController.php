@@ -16,7 +16,9 @@ class GamesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index() {}
+    public function index() {
+        return view('games.list', ['games' => $this->game_list]);
+    }
 
     /**
      * Display the specified resource.
@@ -42,4 +44,6 @@ class GamesController extends Controller
             'content' => $results
         ], 200);
     }
+
+
 }
